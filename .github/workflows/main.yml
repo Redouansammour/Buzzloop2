@@ -27,6 +27,9 @@ jobs:
       - name: Check contents of build/libs folder
         run: |
           ls -l build/libs
+
+      - name: Copy JAR files to Docker context
+        run: cp build/libs/*.jar $GITHUB_WORKSPACE
           
       - name: Docker Build and Push
         uses: docker/build-push-action@v2
