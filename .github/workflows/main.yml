@@ -28,14 +28,6 @@ jobs:
         run: |
           ls -l build/libs
           
-      - name: Check for JAR file
-        run: |
-          ls -l  # Just to make sure there are jar fils
-          if [ ! -f "build/libs/*.jar" ]; then
-            echo "Error: JAR file not found in build/libs folder."
-            exit 1
-          fi
-          
       - name: Docker Build and Push
         uses: docker/build-push-action@v2
         with:
