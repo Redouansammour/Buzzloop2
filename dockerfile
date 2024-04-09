@@ -1,11 +1,9 @@
 # Use the appropriate base image
 FROM openjdk:17-jdk-alpine
 
-# Set the JAR_FILE argument to the location of the JAR file
-ARG JAR_FILE=target/*.jar
+WORKDIR /app
 
-# Copy the JAR file from the build context into the container
-COPY ${JAR_FILE} app.jar
+COPY target/*.jar app.jar
 
 # Expose port 8080 to allow outside access
 EXPOSE 8080
