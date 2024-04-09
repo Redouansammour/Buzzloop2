@@ -3,7 +3,7 @@ FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
-COPY *.jar app.jar
+COPY ${JAR_FILE} app.jar
 
 # Expose port 8080 to allow outside access
 EXPOSE 8080
