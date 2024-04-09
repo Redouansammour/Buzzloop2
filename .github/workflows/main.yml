@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'adopt'
 
       - name: Change to project directory
         run: cd buzzloop-backend  # Change to the directory where your Gradle project is located
