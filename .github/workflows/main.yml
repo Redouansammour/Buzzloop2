@@ -19,6 +19,13 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Check for JAR file
+        run: |
+          if [ ! -f "build/libs/*.jar" ]; then
+            echo "Error: JAR file not found in build/libs folder."
+            exit 1
+          fi
+          
       - name: Build with Gradle
         run: |
           ls -l  # Just to make sure we're in the correct directory
