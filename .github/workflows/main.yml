@@ -29,7 +29,7 @@ jobs:
       - name: Build with Gradle
         run: |
           ls -l  # Just to make sure we're in the correct directory
-          gradle build --no-daemon  # Use the 'gradle' command directly
+          ./gradlew build --no-daemon
 
       - name: Docker Build and Push
         uses: docker/build-push-action@v2
