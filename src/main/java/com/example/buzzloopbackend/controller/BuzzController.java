@@ -14,7 +14,7 @@ public class BuzzController {
         List<String> buzzes = new ArrayList<>();
         buzzes.add("Buzz 1: Lorem ipsum dolor sit amet");
         buzzes.add("Buzz 2: Consectetur adipiscing elit");
-        buzzes.add("Buzz 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua");
+        buzzes.add("Buzz 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqu");
         return buzzes;
     }
 }
